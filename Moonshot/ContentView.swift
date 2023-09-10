@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                MissionsView()
+            }
+            .navigationTitle("Moonshot")
+            .background(.darkBackground)
+            .preferredColorScheme(.dark)
         }
-        .padding()
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
